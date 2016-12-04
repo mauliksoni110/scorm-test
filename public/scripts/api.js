@@ -26,8 +26,9 @@ API.LMSCommit = function() {
 }
 
 API.LMSGetLastError = function() {
-
+  return 0;
 }
+
 
 API.LMSGetErrorString = function() {
 
