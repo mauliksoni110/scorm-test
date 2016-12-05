@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    <title>Thomas</title>
+
+    <link rel="stylesheet" href="/edapp-course/css/app.css">
+  </head>
+  <body>
+    <script type="text/javascript" src="/edapp-course/js/vendor.js"></script>
+    <script type="text/javascript" src="/edapp-course/js/app.js"></script>
+    <script type="text/javascript">
+      try {
+        document.domain = "edapp.com"
+      } catch (err) {
+      }
+
+      $(document).ready(function(){
+        require("app").initialize("scorm");
+      })
+    </script>
+  </body>
+</html>
+

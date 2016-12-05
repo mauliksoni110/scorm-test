@@ -1,0 +1,254 @@
+{
+	"config": {
+		"background": "fit_content_assets/lesson.configuration.config.background-1476855541857.jpeg",
+		"customCSS": "",
+		"logo": "fit_content_assets/lesson.configuration.config.logo-1476855541506.png",
+		"minimumScore": 0,
+		"colors": {
+			"text": "#fff",
+			"background": "#333"
+		},
+		"pageNumbers": true,
+		"pagination": false,
+		"indicator": true
+	},
+	"isOnline": false,
+	"isAudio": false,
+	"slides": [
+		{
+			"name": 0,
+			"data": {
+				"title": "**Spotify Audience reach**",
+				"content": [
+					{
+						"text": "During this lesson, we will review the **key findings** of a study commissioned by Spotify, which looked to quantify the reach and quality of our free audience in 10 countries across Europe.\n\nFollowing this, we will take an **in depth look** at listener behaviour in the **UK.**",
+						"image": "fit_content_assets/1464847700877.jpg"
+					},
+					{
+						"text": "You can use this information when **selling air time** to companies interested in advertising on Spotify.\n\nContinue to review the key findings of the study.",
+						"image": "fit_content_assets/1464853969569.jpg"
+					}
+				],
+				"prompt": "Scroll to see more"
+			},
+			"type": "text-and-images"
+		},
+		{
+			"name": 1,
+			"data": {
+				"narration": {
+					"progress_on_completion": false,
+					"can_not_be_skipped": false
+				},
+				"prompt": "Tap to see more",
+				"focus": true,
+				"list": [
+					{
+						"content": "In 8 of 10 markets, Spotify is the **top audio\nstreaming service.** The average incremental reach is 10%",
+						"title": "Spotify\u001f’s free service delivers unique audience reach."
+					},
+					{
+						"content": "While radio listening activity overindexes in the morning, Spotify\u001f listening **builds steadily throughout the day,** peaking in the afternoon and early evening. ",
+						"title": "Spotify’s audience listens across the day, making it a strong compliment to an audio buy."
+					},
+					{
+						"content": "**40%** of Spotify\u001f Free listeners on average pay full or most of their attention when they're listening, **considerably higher** than most commercial radio stations.",
+						"title": "Spotify\u001f captures attention."
+					}
+				],
+				"title": "**Key Findings**"
+			},
+			"type": "expandable-list"
+		},
+		{
+			"type": "image-multiple-choice",
+			"data": {
+				"challenge_configuration": {
+					"nb_stars": 1
+				},
+				"game": {
+					"timer": {
+						"limit": -1
+					}
+				},
+				"prompt": "Tap the correct graph",
+				"answer": {
+					"takeaway": "",
+					"incorrect": "Not quite...",
+					"correct": "That's correct!",
+					"text": "Spotify\u001f is unique against its radio competitors in that listening **builds steadily throughout the day,** rather than peaking in the morning.\n\nThis means that potential clients have a wider array of **Dayparts** to send out effective advertising in when using Spotify."
+				},
+				"reject": false,
+				"answers": [
+					{
+						"correct": true,
+						"image": "fit_content_assets/1464851553289.png"
+					},
+					{
+						"correct": false,
+						"image": "fit_content_assets/1464851610561.png"
+					}
+				],
+				"selectable": 1,
+				"title": "Select the graph which matches Spotify listening behaviour."
+			},
+			"name": 2
+		},
+		{
+			"type": "slider",
+			"data": {
+				"challenge_configuration": {
+					"nb_stars": 2
+				},
+				"prompt": "Drag to set the correct value",
+				"answer": {
+					"takeaway": "",
+					"incorrect": "Not quite...",
+					"correct": "That's correct!",
+					"value": 40,
+					"text": "40% of listeners pay **full** or **most attention** while listening to Spotify Free - this is considerably higher than listeners of commercial radio stations, and should be mentioned when talking to potential clients."
+				},
+				"slider": {
+					"decimals": 0,
+					"labels": 8,
+					"increment": 10,
+					"suffix": "%",
+					"prefix": "",
+					"max": 50,
+					"min": 0
+				},
+				"title": "What percentage of Spotify listeners pay attention while they are listening?"
+			},
+			"name": 3
+		},
+		{
+			"name": 4,
+			"data": {
+				"title": "**Listener behaviour in the UK**",
+				"subtitle": "Continue to review an in depth look at Spotify's reach compared to radio stations in the UK",
+				"buttonText": "OK, let's go!",
+				"exitButton": true,
+				"narration": {
+					"can_not_be_skipped": false,
+					"progress_on_completion": false
+				}
+			},
+			"type": "title"
+		},
+		{
+			"type": "text-and-images",
+			"data": {
+				"title": "**About Spotify's position in the UK radio market**",
+				"content": [
+					{
+						"text": "Spotify\u001f provides signifi\u001ecant incremental reach to **every radio station in the UK** and across **all age groups,** with up to 21% added reach among 15-34 year-olds.\n\nSpotify has a **14%** incremental reach in relation to\nboth **Heart FM and Capital FM,** and **15%** in relation to\n**Kiss FM.**",
+						"image": "fit_content_assets/1464853783302.jpg"
+					},
+					{
+						"text": "Spoti\u001ffy is the **second most active** listening ‘radio\nstation’ in the UK compared to commercial stations, and with an overall weekly reach of **14.4%,** Spoti\u001ffy is the **second-largest digital music service** in the UK.",
+						"image": "fit_content_assets/1464853969569.jpg"
+					},
+					{
+						"text": "True to the global Spotify trend, Spotify\u001f listening in the UK **builds steadily throughout the day** and peaks in the evening, while radio listening **peaks during morning drive-time.**"
+					}
+				],
+				"prompt": "Scroll to see more"
+			},
+			"name": 5
+		},
+		{
+			"type": "ratio",
+			"data": {
+				"title": "What incremental reach does Spotify have over UK radio stations?",
+				"ratio": {
+					"bars": [
+						{
+							"title": "Heart FM",
+							"value": 4
+						},
+						{
+							"title": "Capitol FM",
+							"value": 4
+						},
+						{
+							"title": "Kiss FM",
+							"value": 5
+						}
+					],
+					"total": 9,
+					"prefix": "1",
+					"suffix": "%",
+					"increment": 1,
+					"independent": true
+				},
+				"answer": {
+					"text": "Spotify has: \n- A **14%** incremental reach in relation to both Heart FM and Capital FM.\n- A **15%** in relation to Kiss FM.\n\nBe sure to remember these numbers when pitching to potential clients, as each of thee are key competitors in the UK market.",
+					"correct": "That's correct!",
+					"incorrect": "Not quite...",
+					"takeaway": ""
+				},
+				"prompt": "Drag to set the correct value"
+			},
+			"name": 6
+		},
+		{
+			"type": "tap-in-order",
+			"data": {
+				"title": "Tap in order of size in the UK digital service market",
+				"list": [
+					"fit_content_assets/1464854674573.png",
+					"fit_content_assets/1464854686769.png",
+					"fit_content_assets/1464854700791.png"
+				],
+				"reject": false,
+				"answer": {
+					"text": "Spoti\u001ffy is the **second-largest** digital music service in the UK, with a **14.4% weekly reach** (second only to iTunes).",
+					"correct": "That's correct!",
+					"incorrect": "Not quite...",
+					"takeaway": ""
+				},
+				"prompt": "Tap in the correct order",
+				"challenge_configuration": {
+					"nb_stars": 1
+				}
+			},
+			"name": 7
+		},
+		{
+			"type": "reorder",
+			"data": {
+				"titleType": "text",
+				"title": "Put the 'listening radio stations' in descending order of most to least active.",
+				"list": [
+					"Gaydio",
+					"Spotify",
+					"Planet Rock"
+				],
+				"answer": {
+					"text": "Spotify\u001f is the **second most active** listening ‘radio\nstation’ in the UK compared to commercial stations.",
+					"correct": "That's correct!",
+					"incorrect": "Not quite...",
+					"takeaway": ""
+				},
+				"prompt": "Put the items in the correct order",
+				"challenge_configuration": {
+					"nb_stars": 2
+				}
+			},
+			"name": 8
+		},
+		{
+			"type": "exit",
+			"permanent": true,
+			"data": {
+				"title": "**That's it!**",
+				"content": "Nice work. You've completed this lesson.",
+				"buttonText": "Exit Lesson"
+			},
+			"name": 9
+		}
+	],
+	"title": "Spotify Audience reach",
+	"index": 0,
+	"id": "583d7be63b0b9e00016bc479"
+}

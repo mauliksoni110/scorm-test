@@ -250,7 +250,6 @@ pipwerks.SCORM.connection.initialize = function(){
         traceMsgPrefix = "SCORM.connection.initialize ";
 
     trace("connection.initialize called.");
-
     if(!scorm.connection.isActive){
 
         var API = scorm.API.getHandle(),

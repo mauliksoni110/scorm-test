@@ -1,0 +1,54 @@
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd" identifier="com.edapp.583d7be63b0b9e00016bc479">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ed_app">
+    <organization identifier="ed_app">
+      <title>Spotify Audience reach</title>
+      <item identifier="item_1" identifierref="resource_1" isvisible="true">
+        <title>Spotify Audience reach</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="resource_1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="css/app.css"/>
+      <file href="font/edsans-bold.woff"/>
+      <file href="font/edsans-italic.woff"/>
+      <file href="font/edsans-light.woff"/>
+      <file href="font/edsans-regular.woff"/>
+      <file href="img/examples/product-1-xl.png"/>
+      <file href="img/examples/product-1.png"/>
+      <file href="img/examples/product-2.png"/>
+      <file href="img/examples/product-3.png"/>
+      <file href="img/templates/image-gallery/left-arrow.png"/>
+      <file href="img/templates/image-gallery/right-arrow.png"/>
+      <file href="img/templates/loader.gif"/>
+      <file href="img/templates/star-default.png"/>
+      <file href="img/templates/star-earned.png"/>
+      <file href="img/templates/star-light.png"/>
+      <file href="img/video/play.png"/>
+      <file href="img/video/replay.png"/>
+      <file href="index.html"/>
+      <file href="js/app.js"/>
+      <file href="js/vendor.js"/>
+      <file href="video/example.mp4"/>
+      <file href="fit_content_assets/lesson.configuration.config.background-1476855541857.jpeg"/>
+      <file href="fit_content_assets/lesson.configuration.config.logo-1476855541506.png"/>
+      <file href="fit_content_assets/1464847700877.jpg"/>
+      <file href="fit_content_assets/1464853969569.jpg"/>
+      <file href="fit_content_assets/1464851553289.png"/>
+      <file href="fit_content_assets/1464851610561.png"/>
+      <file href="fit_content_assets/1464853783302.jpg"/>
+      <file href="fit_content_assets/1464854674573.png"/>
+      <file href="fit_content_assets/1464854686769.png"/>
+      <file href="fit_content_assets/1464854700791.png"/>
+      <file href="adlcp_rootv1p2.xsd"/>
+      <file href="ims_xml.xsd"/>
+      <file href="imscp_rootv1p1p2.xsd"/>
+      <file href="imsmd_rootv1p2p1.xsd"/>
+      <file href="config.json"/>
+    </resource>
+  </resources>
+</manifest>
