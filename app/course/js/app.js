@@ -9,6 +9,7 @@ function initCourse() {
  lmsConnected = scorm.init();
  if(lmsConnected){
    var completionstatus = scorm.get("cmi.core.lesson_status");
+   // scorm.set('cmi.core.student_id','123');
    if(completionstatus === "completed" || completionstatus === "passed")
      {
        handleError("You have already completed this course. You do not need to continue.");
@@ -30,10 +31,12 @@ $(window).load(function(){
   initCourse();
 
   $('.passButton').click(function() {
+
     scorm.set("cmi.core.lesson_status", "completed");
+    // console.log('Supported Children::', scorm.get('cmi.core._children'));
     // scorm.set("cmi.core.score.raw", 36);
-    scorm.data.set('cmi.completion_status','completed');
-    scorm.set("cmi.core.exit", "logout");
+    // scorm.data.set('cmi.completion_status','completed');
+    // scorm.get("cmi.abcd");
     // scorm.save();
   });
 

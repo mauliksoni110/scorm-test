@@ -2,54 +2,84 @@ var API = {};
 var data = {};
 var flagFinished = false;
 var flagInitialized = false;
-var errorCode = '0';
-
-var errorMessages = new Object();
-errorMessages['0'] = 'No Error';
-errorMessages['101'] = 'General Exception';
-errorMessages['201'] = 'Invalid Argument';
-errorMessages['202'] = 'Element Cannot Have Children';
-errorMessages['203'] = 'Element Not an Array - Cannot Have Children';
-errorMessages['301'] = 'API Not Initialized';
-errorMessages['401'] = 'Data Model Element Not Implemented';
-errorMessages['402'] = 'Invalid Set Value - Element is a Keyword';
-errorMessages['403'] = 'Invalid Set Value - Element is Read Only';
-errorMessages['404'] = 'Invalid Get Value - Element is Write Only';
-errorMessages['405'] = 'Invalid Set Value - Incorrect Data Type';
-
+SCORM.errorCode = '0';
 
 API.LMSInitialize = function(input) {
 	console.log('LMSInitialize::', input);
-	flagInitialized = true;
-	return true;
+
+	// API.LMSSetValue('cmi.core.student_id','123');
+	// API.LMSSetValue('cmi.core.student_name','Sohil');
+	// API.LMSSetValue('cmi.core._children','student_id,student_name');
+
+	// already initialized or already finished
+  if ((flagInitialized) || (flagFinished)) {
+    return false;
+  }
+
+  // set initialization flag
+  flagInitialized = true;
+
+  // return success value
+  return true;
 }
 
 API.LMSFinish = function (input) {
 	console.log('LMSTerminate::', input);
-	flagFinished = true;
-	return true;
+
+// 	If cmi.core.exit has already been set to ‘suspend’ when the course exits, then cmi.core.entry should be set to ‘resume’.
+// In all other cases, cmi.core.entry should be set to ” (an empty string).
+	// not initialized or already finished
+  if ((! flagInitialized) || (flagFinished)) {
+    return false;
+  }
+
+  // set finish flag
+  flagFinished = true;
+
+  // return to calling program
+  return true;
 }
 
 API.LMSGetValue = function(key) {
 	console.log('LMSGetValue::', key)
 	if((!flagInitialized) || (flagFinished)) {
-		errorCode = '301';
+		SCORM.errorCode = '301';
 		return '';
 	}
 
-	errorCode = '0';
+	if (!SCORM.isSupported(key)) {
+		SCORM.errorCode = '401';
+		return '';
+	}
+
+  if (!SCORM.dataElementRead) {
+		SCORM.errorCode = '404';
+		return '';
+	}
+
+	SCORM.errorCode = '0';
 	return data[key] || 'default string';
 }
 
 API.LMSSetValue = function(key, val) {
 	console.log("LMSSetValue::"+ key + "=" + val);
 	if((!flagInitialized) || (flagFinished)) {
-		errorCode = '301';
+		SCOM.errorCode = '301';
 		return '';
 	}
 
+	if (!SCORM.isSupported(key)) {
+		SCORM.errorCode = '401';
+		return false;
+	}
+
+ 	if (!SCORM.dataElementRead) {
+			SCORM.errorCode = '403';
+			return false;
+	}
+
 	data[key] = val;
-	errorCode = '0';
+	SCORM.errorCode = '0';
 	return true;
 }
 
@@ -60,17 +90,19 @@ API.LMSCommit = function(commitInput) {
 }
 
 API.LMSGetLastError = function() {
-	console.log('LMSGetLastError::', errorCode);
-  return errorCode;
+	console.log('LMSGetLastError::', SCORM.errorCode);
+  return SCORM.errorCode;
 }
 
 
 API.LMSGetErrorString = function(errorCode) {
-	console.log("LMSGetLastErrorString::", errorCode);
-	return errorMessages[errorCode];
+	console.log("LMSGetLastErrorString::", SCORM.errorCode);
+	return SCORM.errorMessages[errorCode];
 }
 
 API.LMSGetDiagnostics = function(errorCode) {
 	console.log("LMSGetDiagnostics::", errorCode);
-	return errorMessages[errorCode];
+	return SCORM.errorMessages[errorCode];
 }
+
+
