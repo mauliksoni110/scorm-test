@@ -4,41 +4,11 @@ var flagFinished = false;
 var flagInitialized = false;
 SCORM.errorCode = '0';
 
-API.LMSInitialize = function(input) {
-	console.log('LMSInitialize::', input);
 
-	// API.LMSSetValue('cmi.core.student_id','123');
-	// API.LMSSetValue('cmi.core.student_name','Sohil');
-	// API.LMSSetValue('cmi.core._children','student_id,student_name');
-
-	// already initialized or already finished
-  if ((flagInitialized) || (flagFinished)) {
-    return false;
-  }
-
-  // set initialization flag
-  flagInitialized = true;
-
-  // return success value
-  return true;
+API.LMSGetValue_F = function(key) {
+	return data[key];
 }
 
-API.LMSFinish = function (input) {
-	console.log('LMSTerminate::', input);
-
-// 	If cmi.core.exit has already been set to ‘suspend’ when the course exits, then cmi.core.entry should be set to ‘resume’.
-// In all other cases, cmi.core.entry should be set to ” (an empty string).
-	// not initialized or already finished
-  if ((! flagInitialized) || (flagFinished)) {
-    return false;
-  }
-
-  // set finish flag
-  flagFinished = true;
-
-  // return to calling program
-  return true;
-}
 
 API.LMSGetValue = function(key) {
 	console.log('LMSGetValue::', key)
@@ -60,6 +30,12 @@ API.LMSGetValue = function(key) {
 	SCORM.errorCode = '0';
 	return data[key] || 'default string';
 }
+
+
+API.LMSSetValue_F = function(key,val) {
+	data[key] = val;
+}
+
 
 API.LMSSetValue = function(key, val) {
 	console.log("LMSSetValue::"+ key + "=" + val);
@@ -86,6 +62,8 @@ API.LMSSetValue = function(key, val) {
 
 API.LMSCommit = function(commitInput) {
 	console.log('LMSCommit::', commitInput);
+	if ((! flagInitialized) || (flagFinished)) { return false; }
+	// graphql mutation
 	return true;
 }
 
