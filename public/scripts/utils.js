@@ -19,6 +19,22 @@ SCORM.getValueFromLMS = function($varname) {
      $varvalue = '';
      break;
 
+   case 'cmi.launch_data':
+   	 $varvalue = 'credit';
+   	 break;
+
+   case 'cmi.core.lesson_status':
+   	 $varvalue = 'not_attempted';
+   	 break;
+
+   case 'cmi.core.entry':
+   	 $varvalue = 'ab_initio';
+   	 break;
+
+   case 'cmi.core.total_time':
+   	 $varvalue = '0000:00:00';
+   	 break;
+
    default:
      $varvalue = '';
 
